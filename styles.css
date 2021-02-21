@@ -1,0 +1,487 @@
+/*fonts*/
+
+@font-face {
+    font-family: Early;
+    src: url(./fonts/Early\ GameBoy.ttf);
+  }
+
+@font-face{
+    font-family: Pokemon;
+    src: url(./fonts/Pokemon_GB/Pokemon_GB.eot);
+    src: url(./fonts/Pokemon_GB/Pokemon_GB.svg);
+    src: url(./fonts/Pokemon_GB/Pokemon_GB.woff);
+    src: url(./fonts/Pokemon_GB/Pokemon_GB.ttf);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+::-webkit-scrollbar-track {
+    background: #adbe96;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Pokemon, Early;
+  }
+
+body{
+    overflow-x: hidden;
+    position: relative;
+    background: #C4D7AA;
+    margin: 0 auto;
+}
+
+.site-container{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1{
+    padding-top: 20px;
+}
+
+
+/*navbar*/
+
+  .navbar{
+      font-size: .9rem;
+      top: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+      min-width: 100%;
+      border-top: 5px black solid;
+      border-bottom: 5px black solid;
+      position: fixed;
+      background: #C4D7AA;
+      font-size: 1rem;
+    }
+
+    .navbar a{
+        transition: .7s ease;
+
+    }
+
+    .navbar a:hover,
+    .dashboard:hover{
+        background: #9faf89
+    }
+
+  .logo{
+      padding: 20px;
+  }
+
+  .dashboard{
+      color: black;
+      margin: 10px;
+      padding: 6px;
+      border: 3.5px solid black;
+      transition: .3s;
+      text-align: center;
+  }
+
+  .dashboard:hover{
+      color: #C4D7AA;
+  }
+
+  .navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navbar li{
+    list-style: none;
+    padding: 1.5rem;
+}
+
+
+  .navbar a{
+      color: black;
+      text-decoration: none;
+  }
+
+/*navbar responsive*/
+
+  .burger{
+      display: none;
+      flex-direction: column;
+      width: 30px;
+      height: 30px;
+  }
+
+  .line{
+    border-radius: 2px;
+    margin-top: 3px;
+    height: 5px;
+    width: 100%;
+    background: black;
+  }
+
+
+
+  /*site containers*/
+
+
+  .landing-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: landing-in .96s ease-in-out;
+}
+
+@keyframes landing-in{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    85%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.img-box{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: url(./img/poke-box.png);
+    background-size: contain;
+    background-size: 100% 100%;
+    height: auto;
+    width: 70vw;
+    padding: 5rem 1rem;
+    margin-bottom: 80px;
+}
+
+.img-box h1{
+    text-align: center;
+    padding: 29px;
+}
+
+.cc-logo{
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.landing-container .cc-logo h1{
+    margin: 29px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.cc-logo h2{
+    margin: 29px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.soldout{
+    padding-top: 60px;
+    position: relative;
+    font-size: 2rem;
+    font-family: Early;
+    cursor: pointer;
+}
+
+
+
+
+.features-container{
+    padding-top: 55px;
+    margin: 0 auto;
+    height: auto;
+    width: 90vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.features-container h1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.features-boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background-image: url(./img/poke-box.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 30px;
+    width: 350px;
+    height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box h2{
+    font-size: 1.1rem;
+    padding: 0rem 10rem;
+    margin-top: 5rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+}
+
+.box p{
+    font-size: .9rem;
+    padding: 2rem 1.5rem;
+}
+
+
+/* success */
+
+.success-container{
+    padding-top: 55px;
+    margin: 0 auto;
+    height: auto;
+    width: 90vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.success-container h1{
+    padding-top: 20px;
+}
+
+.success-boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.success-container .box{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: url(./img/vvsuccess.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    margin-bottom: -10rem;
+}
+
+
+/*contact*/
+
+.contact-container{
+    margin-top: 10rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.name-input{
+    font-family: Early;
+    background-color: #C4D7AA;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin: 30px;
+    outline: none;
+    border: none;
+    border-bottom: black 3px solid;
+    border-left: black 3px solid;
+    transition: .3s ease;
+}
+
+.name-input:focus{
+    font-family: Early;
+    outline: none;
+}
+
+.submit{
+    outline: none;
+    border: 2px black solid;
+    background-color: rgb(189, 189, 189);
+    font-family: Early;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .2s ease-out;
+}
+
+.submit:hover{
+    background-color: rgb(179, 179, 179);
+    border-left: grey 3px solid;
+    border-top: grey 3px solid;
+    transform: scale(0.95); 
+ }
+
+
+ .footer{
+
+    border: 3px black solid;
+
+    width: 100vw;
+    height: 70px;
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    }
+
+    .footer a{
+        text-decoration: none;
+        color: black;
+    }
+
+.footer ul{
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    }
+
+.footer li{
+    margin: 5px;
+}
+
+.footer .fab{
+    font-size: 20px;
+}
+
+
+
+
+@media only screen and (min-width: 1300px){
+    .img-box{
+        background-image: url(./img/poke-box-wide.png);
+        filter: grayscale(100%);
+        height: auto;
+        padding: 80px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .footer{
+        height: 80px;
+        font-size: 10px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 930px) {
+    .navbar li{
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    .footer{
+        font-size: 8px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+
+
+@media only screen and (max-width: 620px) {
+    .landing-container .cc-logo h1{
+        margin: 0px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .landing-container .cc-logo h2{
+        font-size: .7rem;
+    }
+    .soldout{
+        font-size: .9rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 520px) {
+    .img-box{
+        font-size: 0.7rem;
+    }
+
+    .footer{
+        font-size: 6px;
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+
+    .footer{
+
+        height: 85px;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+
+    .img-box{
+        font-size: 0.5rem;
+    }
+
+    .footer{
+        font-size: 4px;
+        height: 50px;
+    }
+  }
